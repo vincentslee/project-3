@@ -15,7 +15,7 @@ class MainApp extends App {
             <
             Head >
             <
-            title > David Latuno < /title> <
+            title > Optimization of Wellness < /title> <
             meta property = "og:title"
             content = "Wellness Optimization" / >
             <
@@ -58,8 +58,8 @@ class MainApp extends App {
             div className = "container mainContainer" >
             <
             Component {...pageProps }
-            /> <
-            /div> <
+            /> < /
+            div > <
             /Container>
         );
     }
