@@ -57,8 +57,8 @@ class MainApp extends App {
             div className = "container mainContainer" >
             <
             Component {...pageProps }
-            />  <
-            /div>  <
+            />  < /
+            div > <
             /Container>
         );
     }

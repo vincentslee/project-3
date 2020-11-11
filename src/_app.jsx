@@ -10,12 +10,12 @@ library.add(fab, fas);
 class MainApp extends App {
     render() {
         const { Component, pageProps } = this.props;
-        return ( < Container >
+        return ( <
+            Container >
             <
             Head >
             <
-            title > Optimization of Wellness < /title>   <
-            meta property = "og:title"
+            title > Optimization of Wellness < /title>   <meta property = "og:title"
             content = "Wellness Optimization" / >
             <
             meta property = "og:description"
@@ -47,8 +47,7 @@ class MainApp extends App {
             integrity = "sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossOrigin = "anonymous" / >
             <
-            /Head>   <
-            Favicon url = "favicon(3).ico" / >
+            /Head>   <Favicon url = "favicon(3).ico" / >
             <
             div className = "container mainContainer" >
             <
