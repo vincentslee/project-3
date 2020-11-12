@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 //import axios from 'axios';
 import './RegistrationForm.css';
 import {withRouter} from "react-router-dom";
+import Axios from 'axios';
 
 function RegistrationForm(props){
 
@@ -28,8 +29,15 @@ function RegistrationForm(props){
                 "email":state.email,
                 "password":state.password,
             }
-            //INSERT AXIOS POST REQUEST HERE
-            //////////////////////////////
+            
+            Axios.post('api/signup', payload)
+            .then(()=>
+                redirectToHome());
+
+
+
+
+
         }else{
             props.showError('Please enter valid username and password')
         }
