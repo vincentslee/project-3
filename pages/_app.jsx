@@ -15,7 +15,7 @@ class MainApp extends App {
             <
             Head >
             <
-            title > John Glendening < /title> <
+            title > To Your Health < /title> <
             meta property = "og:title"
             content = "To Your Health" / >
             <
