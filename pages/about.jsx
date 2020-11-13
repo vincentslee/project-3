@@ -10,10 +10,10 @@ const App = () => ( <
     <
     Navbar / >
     <
-    Jumbotron phrase = "Keep your health."
+    Jumbotron phrase = "To your health."
     subtitle = "Stay on top of health issues with easy to follow documentation" / >
     <
-    h3 > My Story < /h3> <
+    h3 > About < /h3> <
     hr / >
     <
     div className = "row" >
