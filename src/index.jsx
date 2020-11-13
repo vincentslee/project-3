@@ -13,7 +13,7 @@ const Home = () => ( <
     Jumbotron phrase = "Optimize wellness and performance through blood tests, nutrition, and science."
     subtitle = "A quick and easy way to stay on top of overall health and wellness." / >
     <
-    h3 > Wellness tools < /h3> <
+    h3 > Status Updates < /h3> <
     hr / >
     <
     div className = "row" >
@@ -29,41 +29,24 @@ const Home = () => ( <
     <
     Picture source = ""
     alt = ""
-    deployed = ""
-    " /> < /
-    div >
-
+    deployed = "" / >
     <
-    /div>
-
-    <
-    h3 className = "Tools" > Wellness Tools < /h3> <
-    hr / >
-    <
-    div className = "row" >
-    <
-    div className = "col-md-4" >
+    /div> <
+    div className = "col-md-6" >
     <
     Picture source = ""
     alt = ""
-    github = "" / >
+    deployed = "" / >
     <
     /div> <
-    div className = "col-md-4" >
-    <
-    Picture source = "g"
-    alt = ""
-    github = "" / >
-    <
-    /div> <
-    div className = "col-md-4" >
+    div className = "col-md-6" >
     <
     Picture source = ""
     alt = ""
-    github = "" / >
+    deployed = "" / >
     <
-    /div> < /
-    div > <
+    /div> <
+    /div> <
     Footer / >
     <
     /div>
