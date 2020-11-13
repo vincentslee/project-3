@@ -5,16 +5,14 @@ import Footer from '../components/footer';
 import IconImage from '../components/iconImage';
 import '../static/css/pages.css';
 
-const App = () => ( <
-    div >
+const App = () => ( < div >
     <
     Navbar / >
     <
     Jumbotron phrase = "Get a simple update on your health."
     subtitle = "Get healthy, fast" / >
     <
-    h3 > My Story < /h3> <
-    hr / >
+    h3 > My Story < /h3> <hr/ >
     <
     div className = "row" >
     <
@@ -24,9 +22,7 @@ const App = () => ( <
     src = "../static/pics/DSC_6082.jpg"
     alt = "profilepic" / >
     <
-    /div> <
-    div className = "col-md-6 aboutSections" >
-    <
+    /div> <div className = "col-md-6 aboutSections"> <
     h4 className = "bio bio1" >
     A biological information application -
     User can record various necessary biological information and show medical professionals at the time of an emergency or a scheduled appointment.Features: Record weight, blood pressure, blood sugar, medication list, dietary journal Ideas
@@ -36,16 +32,13 @@ const App = () => ( <
     Research api / library to create a pie chart to show nutritional information breakdown -
     Notify the user to record information like blood sugar / pressure -
     Email notification to record data and have the info recorded through a reply email to the app. <
-    /h4> <
-    /div> <
-    /div> <
-    h3 className = "skills" > Features < /h3> <
-    hr / >
+    /h4>  <
+    /div>  <
+    /div>  <
+    h3 className = "skills" > Features < /h3> <hr/ >
     <
-    div className = "row" >
-    <
-    div className = "col" >
-    <
+    div className = "row" > < /div> <
+    div className = "col" > < /div> <
     div className = "row" >
     <
     div className = "col-sm-6" >
@@ -59,9 +52,7 @@ const App = () => ( <
     IconImage source = "../static/pics/css.png"
     alt = "css" / >
     <
-    /div> <
-    div className = "col-sm-6" >
-    <
+    /div> <div className = "col-sm-6"> <
     IconImage source = "../static/pics/githubIcon.png"
     alt = "github" / >
     <
@@ -71,12 +62,7 @@ const App = () => ( <
     IconImage source = "../static/pics/javascript.png"
     alt = "javascript" / >
     <
-    /div> <
-    /div> <
-    /div> <
-    /div> <
-    div className = "row" >
-    <
+    /div> <div className = "row"> <
     div className = "col" >
     <
     div className = "row" >
@@ -92,9 +78,7 @@ const App = () => ( <
     IconImage source = "../static/pics/mongodb.png"
     alt = "mongodb" / >
     <
-    /div> <
-    div className = "col-sm-6" >
-    <
+    /div> <div className = "col-sm-6"> <
     IconImage source = "../static/pics/mysql.png"
     alt = "mysql" / >
     <
@@ -104,10 +88,10 @@ const App = () => ( <
     IconImage source = "../static/pics/React.png"
     alt = "react" / >
     <
-    /div> <
-    /div> <
-    /div> <
-    /div> <
+    /div>  <
+    /div>  <
+    /div>  <
+    /div>  <
     Footer / >
     <
     /div>
