@@ -18,13 +18,11 @@ const Navbar = () => ( <
     id = "navbarSupportedContent">
     <ul className = "navbar-nav">
     <li className = "nav-item">
-    <Link href = "/" 
-        >
+    <Link href = "/"
     <a className = "nav-link"> Home </a> </Link> </li> <li className = "nav-item">
     <Link href = "/about">
     <a className = "nav-link" > ABOUT </a> </Link> </li> <li className = "nav-item">
-    <Link href = "/tools" 
-        >
+    <Link href = "/tools"
     <a className = "nav-link"> Tools </a> </Link> </li> </ul> </div> </nav>
 );
 
