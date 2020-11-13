@@ -30,10 +30,26 @@ function RegistrationForm(props){
                 "password":state.password,
             }
             
-            Axios.post('api/signup', payload)
-            .then(()=>
-                redirectToHome());
+            console.log(payload)
+            Axios.post('/api/signup', payload)
+                .then(function(response){
+                    if(response.status === 200){
+                        setState(prevState => ({
+                            ...prevState,
+                            'successMessage' : 'Registration successful. Redirecting to home page..'
+                            
+                            
+                        }))
+                        console.log("Trying to redirect to home...")
+                        redirectToHome();
+                        //localStorage.setItem(ACCESS_TOKEN_NAME,response.data.token);
 
+                    }
+                }).catch(err => {
+                    console.log(err);
+                    });
+            
+            
 
 
 
@@ -44,6 +60,7 @@ function RegistrationForm(props){
     }
 
     const redirectToHome = () => {
+        //console.log("Redirecting to home...")
         props.updateTitle('Home')
         props.history.push('/home');
     }

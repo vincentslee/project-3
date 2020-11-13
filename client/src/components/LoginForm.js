@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, {useState} from 'react';
-//import axios from 'axios';
+import axios from 'axios';
 import './LoginForm.css';
 import { withRouter } from "react-router-dom";
 
@@ -27,6 +27,13 @@ function LoginForm(props) {
             "email":state.email,
             "password":state.password
         }
+
+        axios.post('/api/login', payload)
+        .then((response)=>{
+            console.log("Attemping to log in...")
+
+        })
+        
     }
 
     //Axios post method goes here
