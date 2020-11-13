@@ -5,7 +5,7 @@ const Navbar = () => ( <
     <
     Link href = "/" >
     <
-    a className = "navbar-brand" > John Glendening < /a> <
+    a className = "navbar-brand" > To Your Health < /a> <
     /Link> <
     button className = "navbar-toggler"
     type = "button"
@@ -41,7 +41,7 @@ const Navbar = () => ( <
     /li> <
     li className = "nav-item" >
     <
-    Link href = "/contact" >
+    Link href = "/tools" >
     <
     a className = "nav-link" > Tools < /a> <
     /Link> <
