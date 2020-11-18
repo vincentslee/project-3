@@ -41,7 +41,7 @@ class MainApp extends App {
             crossOrigin="anonymous"
           />
         </Head>
-        <Favicon url="src\images\blood-drop.jpg" />
+        <Favicon url="public\favicon (2).ico" />
         <div className="container mainContainer">
           <Component {...pageProps} />
         </div>
