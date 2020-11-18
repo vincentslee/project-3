@@ -8,34 +8,31 @@ import '../static/css/pages.css';
 const App = () => (
   <div>
     <Navbar />
-    <Jumbotron phrase="to your health" />
-    <h3>about</h3>
+    <Jumbotron phrase="Tools to help you keep on top of your health." subtitle="Use our tools to help you keep track of your health." />
+    <h3>My Story</h3>
     <hr />
     <div className="row">
       <div className="col-md-6 aboutSections">
-        <img className="profilePic profilePic1" src=".jpg" alt="profilepic" />
+        <img className="profilePic profilePic1" src="react-portfolio-master\static\pics\10-ways-to-stay-healthy-at-work.png" alt="profilepic" />
       </div>
       <div className="col-md-6 aboutSections">
         <h4 className="bio bio1">
-        Talk about site
+      With all the changing environments and health concerns growing in today's society, everyone could use a simpler way to keep up to date on their health. Utilizing our application will help users maintain consistent data and keep track of health concerns.
         </h4>
       </div>
     </div>
-    <h3 className="tools">Tools</h3>
+    <h3 className="skills">Application tools</h3>
     <hr />
     <div className="row">
       <div className="col">
         <div className="row">
           <div className="col-sm-6">
-            <IconImage source="../static/pics/html.png" alt="html" />
-            <IconImage source="../static/pics/bootstrap.png" alt="bootstrap" />
-            <IconImage source="../static/pics/css.png" alt="css" />
+            <IconImage source="react-portfolio-master\static\pics\healthgraph1.png" alt="graphs" />
+            <IconImage source="react-portfolio-master\static\pics\medical-graphs-8-728.jpg" alt="charts" />
+            <IconImage source="react-portfolio-master\static\pics\Section-of-medical-data-entry-form-example.png" alt="data entry logs" />
           </div>
-          <div className="col-sm-6">
-            <IconImage source="../static/pics/githubIcon.png" alt="github" />
-            <IconImage source="../static/pics/handlebars.png" alt="handlebars" />
-            <IconImage source="../static/pics/javascript.png" alt="javascript" />
-          </div>
+        </div>
+      </div>
     </div>
     <Footer />
   </div>
