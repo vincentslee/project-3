@@ -13,11 +13,11 @@ class MainApp extends App {
     return (
       <Container>
         <Head>
-          <title>to your health</title>
-          <meta property="og:title" content="to your health" />
-          <meta property="og:description" content="Describe site" />
-          <meta name="description" content="Describe site" />
-          <meta property="og:image" content=".jpg" />
+          <title>Healthy Ways</title>
+          <meta property="og:title" content="Healthy Ways Introduction" />
+          <meta property="og:description" content="Looking for an easier way to stay on top of your health and also be able to contact medical professionals in time of need?" />
+          <meta name="description" content="Looking for an easier way to stay on top of your health and also be able to contact medical professionals in time of need?" />
+          <meta property="og:image" content="react-portfolio-master\static\pics\healthywayslogo_0.png" />
           <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand" rel="stylesheet" />
           <link
             rel="stylesheet"
@@ -51,4 +51,3 @@ class MainApp extends App {
 }
 
 export default MainApp;
-
