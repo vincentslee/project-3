@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <Link href="/">
-      <a className="navbar-brand">to your health</a>
+      <a className="navbar-brand">Healthy Ways</a>
     </Link>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon" />
@@ -13,7 +13,7 @@ const Navbar = () => (
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link href="/">
-            <a className="nav-link">HOME</a>
+            <a className="nav-link">Home</a>
           </Link>
         </li>
         <li className="nav-item">
@@ -22,8 +22,8 @@ const Navbar = () => (
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/tools">
-            <a className="nav-link">TOOLS</a>
+          <Link href="/contact">
+            <a className="nav-link">CONTACT</a>
           </Link>
         </li>
       </ul>
