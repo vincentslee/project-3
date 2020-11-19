@@ -2,21 +2,43 @@
 const { sequelize } = require("../models");
 const db = require("../models");
 const User = require('../models/user')
+const bcrypt = require('bcryptjs')
+const passport = require('passport')
+const initializePassport = require('../client/config/passport-config')
+
+
+
 
 module.exports = function(app) {
-  // Using the passport.authenticate middleware with our local strategy.
+  
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
-  app.post("/api/login", (req, res) => {
-    console.log("User is being logged in...")
-    //console.log(userid)
-    // Sending back a password, even a hashed password, isn't a good idea
-    console.log(res.status)
+  app.post("/api/login", passport.authenticate('local'), (req, res) => {
     res.json({
-      email: req.body.email,
-      id: req.body.id
-    });
+      email: req.user.email,
+      id: req.user.id
+    })
+
+    User.findOne({
+      where: {
+          email: req.user.email
+      }
+    }).then(response=>{
+      console.log("finding user...")
+      if(req.user.password === response.dataValues.password){
+        console.log("match")
+        res.send(200)
+      }else{
+        res.send('Invalid email or password')
+      }
+    })
   });
+
+  app.post('/api/data', (req, res)=>{
+    
+  })
+
+
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
@@ -31,8 +53,10 @@ module.exports = function(app) {
       })
       .catch(err => {
         //console.log('Signup route error')
+        console.log('Validation error')
         console.log(err)
         res.status(401).json(err);
+        //res.send(401)
       });
       
 

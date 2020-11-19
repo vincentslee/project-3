@@ -33,6 +33,8 @@ function RegistrationForm(props){
             console.log(payload)
             Axios.post('/api/signup', payload)
                 .then(function(response){
+                    console.log(response)
+                    //console.log('invalid message')
                     if(response.status === 200){
                         setState(prevState => ({
                             ...prevState,
@@ -44,8 +46,12 @@ function RegistrationForm(props){
                         redirectToHome();
                         //localStorage.setItem(ACCESS_TOKEN_NAME,response.data.token);
 
+                    }else if(response.code ===401){
+                        props.showError('Invalid username or password')
                     }
                 }).catch(err => {
+                    console.log('invalid user/password')
+                    props.showError('Invalid email or password')
                     console.log(err);
                     });
             

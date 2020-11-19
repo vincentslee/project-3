@@ -30,8 +30,18 @@ function LoginForm(props) {
 
         axios.post('/api/login', payload)
         .then((response)=>{
+            console.log(payload)
             console.log("Attemping to log in...")
+            console.log(response)
+            if (response.status === 200){
+                redirectToHome();
+            }else{
+                props.showError('Incorrect email or password')
+            }
 
+        })
+        .catch(err=>{
+            console.log(err)
         })
         
     }

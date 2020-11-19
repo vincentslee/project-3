@@ -1,37 +1,33 @@
 /* eslint-disable */
 const express = require("express");
-const session = require('express-session');
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
-const {Sequelize} = require('sequelize');
+//const {Sequelize} = require('sequelize');
 const db = require('./models');
 
+const flash = require('express-flash')
+const session = require('express-session')
+const passport = require('passport')
+
+app.use(flash())
+app.use(
+  session({ secret: "developer", resave: false, saveUninitialized: false })
+);
+app.use(passport.initialize())
+app.use(passport.session())
+
+
+
+
+
 const http = require('http');
+const { useParams } = require("react-router-dom");
 
-const mysql = require('mysql');
-
-//Code for mysql db connection, might not be used
-/* const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
-  database: 'project-3'
-});
-
-db.connect(function(err){
-  console.log("Database connected")
-  if (err){
-    console.log('DB error');
-    throw err;
-  }
-}); */
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-);
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
