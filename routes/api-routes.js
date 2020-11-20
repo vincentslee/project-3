@@ -2,9 +2,11 @@
 const { sequelize } = require("../models");
 const db = require("../models");
 const User = require('../models/user')
+const Data = require('../models/data')
 const bcrypt = require('bcryptjs')
 const passport = require('passport')
-const initializePassport = require('../client/config/passport-config')
+const initializePassport = require('../client/config/passport-config');
+//const { INTEGER } = require("sequelize/types");
 
 
 
@@ -18,7 +20,7 @@ module.exports = function(app) {
       email: req.user.email,
       id: req.user.id
     })
-
+    console.log("User id: "+req.user.id)
     User.findOne({
       where: {
           email: req.user.email
@@ -27,14 +29,39 @@ module.exports = function(app) {
       console.log("finding user...")
       if(req.user.password === response.dataValues.password){
         console.log("match")
-        res.send(200)
+        res.sendStatus(200)
+        res.send(req.user.id)
       }else{
         res.send('Invalid email or password')
       }
+      res.redirect(307, "/api/getdata")
     })
   });
 
-  app.post('/api/data', (req, res)=>{
+  app.post('/api/getdata', (req, res)=>{
+    Data.findAll({
+      where: {
+        userid: req.user.id
+      }
+    }).then(response=>{
+      res.json({
+        response
+      })
+    })
+  })
+
+  app.post('/api/submitdata', (req, res)=>{
+    /* res.json({
+      id: req.user.id
+    }) */
+    Data.create({
+      userid: req.user.id,
+      date: String(req.body.date),
+      bloodPU: req.body.bloodPU,
+      bloodPL: req.body.bloodPL
+    }).then(()=>{
+      console.log(res.status)
+    })
     
   })
 
@@ -71,7 +98,7 @@ module.exports = function(app) {
   });
 
   // Route for getting some data about our user to be used client side
-  app.get("/api/user_data", (req, res) => {
+  /* app.get("/api/user_data", (req, res) => {
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({});
@@ -83,5 +110,5 @@ module.exports = function(app) {
         id: req.user.id
       });
     }
-  });
+  }); */
 };

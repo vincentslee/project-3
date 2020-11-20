@@ -15,7 +15,7 @@ import Home from './components/Home';
 //import PrivateRoute from './utils/PrivateRoute';
 import AlertComponent from './components/AlertComponent';
 
-
+import Chart from './components/chart';
 
 function App() {
   const [title, updateTitle] = useState(null);
@@ -37,6 +37,7 @@ function App() {
             </Route>
             <Route path="/home">
               <Home/>
+              <Chart/>
             </Route>
           </Switch>
           <AlertComponent errorMessage={errorMessage} hideError={updateErrorMessage}/>
