@@ -15,21 +15,27 @@ class MainApp extends App {
             <
             Head >
             <
-            title > Healthy Ways < /title> <
-            meta property = "og:title"
-            content = "Healthy Ways Introduction" / >
+            title > Healthy Ways <
+            /title> <meta
+            property = "og:title"
+            content = "Healthy Ways Introduction" /
+            >
             <
             meta property = "og:description"
-            content = "Looking for an easier way to stay on top of your health and also be able to contact medical professionals in time of need?" / >
+            content = "Looking for an easier way to stay on top of your health and also be able to contact medical professionals in time of need?" /
+            >
             <
             meta name = "description"
-            content = "Looking for an easier way to stay on top of your health and also be able to contact medical professionals in time of need?" / >
+            content = "Looking for an easier way to stay on top of your health and also be able to contact medical professionals in time of need?" /
+            >
             <
             meta property = "og:image"
-            content = "react-portfolio-master\static\pics\healthywayslogo_0.png" / >
+            content = "react-portfolio-master\static\pics\healthywayslogo_0.png" /
+            >
             <
             link href = "https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand"
-            rel = "stylesheet" / >
+            rel = "stylesheet" /
+            >
             <
             link rel = "stylesheet"
             href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -52,8 +58,7 @@ class MainApp extends App {
             crossOrigin = "anonymous" /
             >
             <
-            /Head> <
-            Favicon url = "src\images\blood-drop.jpg" / >
+            /Head> <Favicon url="src\images\blood-drop.jpg" / >
             <
             div className = "container mainContainer" >
             <
