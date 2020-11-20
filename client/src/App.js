@@ -12,7 +12,7 @@ import Header from './components/Header';
 import LoginForm from './components/LoginForm';
 import RegistrationForm from './components/RegistrationForm';
 import Home from './components/Home';
-import PrivateRoute from './utils/PrivateRoute';
+//import PrivateRoute from './utils/PrivateRoute';
 import AlertComponent from './components/AlertComponent';
 
 
