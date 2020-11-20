@@ -14,7 +14,7 @@ const Home = () => ( <
     Jumbotron phrase = "Healthier."
     subtitle = "A simpler way to stay healthy." / >
     <
-    h3 > In today 's world, it can be difficult to stay up to speed on health issues. Let our application help you keep track.</h3> <hr/>   <
+    h3 > In today 's world, it can be difficult to stay up to speed on health issues. Let our application help you keep track.</h3> <hr/> <
     div className = "row" >
     <
     div className = "col-md-6" >
@@ -23,11 +23,13 @@ const Home = () => ( <
     alt = "Graphs"
     deployed = "" / >
     <
-    /div> <div className = "col-md-6"> <Picture source = "react-portfolio-master\static\pics\healthgraph1.png"
+    /div> <div className = "col-md-6"> <
+    Picture source = "react-portfolio-master\static\pics\healthgraph1.png"
     alt = "charts"
     deployed = "" / >
     <
-    /div> <div className = "col-md-6"> <Picture source = "react-portfolio-master\static\pics\Section-of-medical-data-entry-form-example.png"
+    /div> <div className = "col-md-6"> <
+    Picture source = "react-portfolio-master\static\pics\Section-of-medical-data-entry-form-example.png"
     alt = "data entry logs"
     deployed = "" / >
     <
