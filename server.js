@@ -27,6 +27,7 @@ const { useParams } = require("react-router-dom");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+app.use(express.favicon());
 
 
 // Serve up static assets (usually on heroku)
@@ -41,8 +42,13 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-db.sequelize.sync().then(()=>{
+/* db.sequelize.sync().then(()=>{
   app.listen(PORT, function() {
+    console.log(`🌎 ==> API server now on port ${PORT}!`);
+  });
+}) */
+db.sequelize.sync().then(()=>{
+  http.createServer(app).listen(PORT, function() {
     console.log(`🌎 ==> API server now on port ${PORT}!`);
   });
 })
