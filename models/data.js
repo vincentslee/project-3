@@ -6,7 +6,7 @@ const Data = sequelize.define("Data",{
         allowNull: false
     },
     date: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATEONLY,
         allowNull: false
     },
     bloodPU: {

@@ -7,8 +7,6 @@ import {withRouter} from 'react-router-dom';
 
 function Home(props){
 
-    
-
     const [state, setState] = useState({
         date : "",
         bloodPU: "",
@@ -33,8 +31,6 @@ function Home(props){
         }
 
         Axios.post('/api/submitdata', payload)
-        
-        
         
     }
 
