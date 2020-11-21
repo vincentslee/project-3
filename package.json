@@ -41,5 +41,9 @@
     "recharts": "^1.8.5",
     "sequelize": "^6.3.5",
     "sqlite3": "^5.0.0"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
   }
 }
