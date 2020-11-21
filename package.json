@@ -39,7 +39,6 @@
     "react-router-dom": "^5.2.0",
     "react-transition-group": "^1.2.1",
     "recharts": "^1.8.5",
-    "sequelize": "^6.3.5",
-    "sqlite3": "^5.0.0"
+    "sequelize": "^6.3.5"
   }
 }
