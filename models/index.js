@@ -11,12 +11,8 @@ const db        = {};
       idle: 10000
     }
   }); */
-  let sequelize = new Sequelize(process.env.HEROKU_POSTGRESQL_BRONZE_URL, {
-    dialect: 'postgres',
-    protocol: 'postgres',
-    port: match[4],
-    host: match[3],
-    logging: true
+  let sequelize = new Sequelize(process.env.JAWSDB_URL, {
+    dialect: 'mysql'
   });
 
 sequelize.authenticate()
