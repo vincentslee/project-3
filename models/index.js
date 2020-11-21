@@ -11,9 +11,7 @@ const db        = {};
       idle: 10000
     }
   }); */
-  let sequelize = new Sequelize(process.env.JAWSDB_URL, {
-    dialect: 'mysql'
-  });
+let sequelize = new Sequelize(process.env.JAWSDB_URL);
 
 sequelize.authenticate()
 .then(() => {
